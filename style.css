@@ -1,0 +1,32 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    background-color: white;
+
+    margin: 0;
+
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+.button {
+    margin: 0.6rem;
+    
+}
+
+p {
+    margin: 0.6rem;
+}
+
+.button1 {
+    display: block;
+    margin: 0.6rem;
+}
+
+.input {
+    margin: 0.6rem;
+}
