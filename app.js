@@ -83,7 +83,7 @@ function testName() {
     } else {
         document.getElementById('Info').innerHTML = 'Your balance:' + newBalance;
     }
-ыыыыы
+
 }*/
 
 
