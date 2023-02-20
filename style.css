@@ -5,6 +5,7 @@ body {
 
     margin: 0;
 
+    position: relative;
 }
 
 *,
@@ -29,4 +30,22 @@ p {
 
 .input {
     margin: 0.6rem;
+}
+
+
+textarea {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+
+}
+
+.show {
+    
+    position: absolute;
+    top: 75%;
+    left: 40%;
+    max-width: 100%;
+    word-break: break-all;
+
 }

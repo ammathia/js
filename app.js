@@ -89,3 +89,14 @@ function testName() {
 
 
 
+const ourArea = document.querySelector('textarea');
+
+
+const onKey = e => {
+    document.getElementById('pId').innerHTML += e.code + e.key;
+
+}
+
+
+
+ourArea.addEventListener('keydown', onKey);
