@@ -100,3 +100,24 @@ const onKey = e => {
 
 
 ourArea.addEventListener('keydown', onKey);
+
+
+let items = document.querySelectorAll('.word');
+let item = document.querySelector('.word');
+
+
+function showWord() {
+    
+    for ( item1 of items) {
+    item1.classList.remove('word-active');
+    }
+    item.classList.add('word-active');
+    item = item.nextElementSibling;
+
+}
+
+
+setInterval(showWord, 1000);
+setInterval(() => {
+    item = document.querySelector('.word');
+}, 8000);

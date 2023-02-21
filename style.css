@@ -49,3 +49,15 @@ textarea {
     word-break: break-all;
 
 }
+
+
+.word {
+    position: absolute;
+    left: 10px;
+    top: 100%;
+    display: none;
+}
+
+.word-active {
+    display: block;
+}
