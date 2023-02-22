@@ -86,22 +86,18 @@ function testName() {
 в
 }*/
 
-
-
-
+/* 
 const ourArea = document.querySelector('textarea');
-
 
 const onKey = e => {
     document.getElementById('pId').innerHTML += e.code + e.key;
 
 }
+ourArea.addEventListener('keydown', onKey); */
 
 
 
-ourArea.addEventListener('keydown', onKey);
-
-
+/* 
 let items = document.querySelectorAll('.word');
 let item = document.querySelector('.word');
 
@@ -121,4 +117,60 @@ setInterval(showWord, 1000);
 setInterval(() => {
     item = document.querySelector('.word');
 }, 8000);
+ */
 
+
+
+
+let btn = document.getElementById('btn1');
+let colText = document.getElementById('colorText');
+
+btn.onclick = function() {
+    let text = document.getElementById('text1').value;
+    let arr1 = Array.from(text);
+
+
+
+    for( let i = 0; i < arr1.length; i++) {
+    if (isFinite(arr1[i])) { 
+        alert('no numbers');
+        return;
+    }
+
+    
+    for( let i = 0; i < arr1.length; i++) {
+
+        if (arr1[i] === arr1[i].toUpperCase()) {
+            let bigDiv = document.createElement('span');
+            bigDiv.className = 'colored1';
+            bigDiv.innerHTML = arr1[i];
+            colText.append(bigDiv);
+        } else if (arr1[i] === arr1[i].toLowerCase()) {
+            let smallDiv = document.createElement('span');
+            smallDiv.innerHTML = arr1[i];
+            colText.append(smallDiv);
+        }
+
+  
+    }
+    }
+}
+
+
+
+
+function numberReturn(str) {
+
+     let ar1 = Array.from(str);
+     let ar2 = [];
+
+     for ( let i = 0; i < ar1.length; i++) {
+        if (isFinite(ar1[i]) && ar1[i] !== '' && ar1[i] !== ' ') {
+            ar2.push(ar1[i]);
+        }
+     }
+     console.log(ar2);
+
+}
+
+numberReturn('asd23rd32e321 .234567uhgrew234  5 67 ytre w456y');
