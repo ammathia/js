@@ -108,7 +108,7 @@ let item = document.querySelector('.word');
 
 function showWord() {
     
-    for ( item1 of items) {
+    for ( let  item1 of items) {
     item1.classList.remove('word-active');
     }
     item.classList.add('word-active');
@@ -121,3 +121,4 @@ setInterval(showWord, 1000);
 setInterval(() => {
     item = document.querySelector('.word');
 }, 8000);
+
