@@ -146,6 +146,7 @@ btn.onclick = function() {
             bigDiv.innerHTML = arr1[i];
             colText.append(bigDiv);
         } else if (arr1[i] === arr1[i].toLowerCase()) {
+            
             let smallDiv = document.createElement('span');
             smallDiv.innerHTML = arr1[i];
             colText.append(smallDiv);
