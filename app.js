@@ -121,7 +121,7 @@ setInterval(() => {
 
 
 
-
+/* 
 let btn = document.getElementById('btn1');
 let colText = document.getElementById('colorText');
 
@@ -154,10 +154,10 @@ btn.onclick = function() {
   
     }
     }
-}
+} */
 
 
-
+/* 
 
 function numberReturn(str) {
 
@@ -173,4 +173,19 @@ function numberReturn(str) {
 
 }
 
-numberReturn('asd23rd32e321 .234567uhgrew234  5 67 ytre w456y');
+numberReturn('asd23rd32e321 .234567uhgrew234  5 67 ytre w456y'); */
+
+
+
+let xhr = new XMLHttpRequest;
+
+let url = 'https://run.mocky.io/v3/923c1f41-90bf-4ea9-a362-23a631f0eb54';
+
+xhr.open("GET", url);
+xhr.send();
+xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4) {
+        console.log(xhr.responseText);
+    }
+}
+
