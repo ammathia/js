@@ -146,7 +146,7 @@ btn.onclick = function() {
             bigDiv.innerHTML = arr1[i];
             colText.append(bigDiv);
         } else if (arr1[i] === arr1[i].toLowerCase()) {
-            
+
             let smallDiv = document.createElement('span');
             smallDiv.innerHTML = arr1[i];
             colText.append(smallDiv);
@@ -176,17 +176,73 @@ function numberReturn(str) {
 
 numberReturn('asd23rd32e321 .234567uhgrew234  5 67 ytre w456y'); */
 
+/* 
+let url = 'https://jsonplaceholder.typicode.com/users';
 
 
+
+
+function sendRequest(method, url, body = null) {
+
+    return new Promise((resolve,reject) => {
+        
 let xhr = new XMLHttpRequest;
 
-let url = 'https://run.mocky.io/v3/923c1f41-90bf-4ea9-a362-23a631f0eb54';
 
-xhr.open("GET", url);
-xhr.send();
-xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4) {
-        console.log(xhr.responseText);
+xhr.open(method, url);
+xhr.responseType = 'json';
+xhr.setRequestHeader('Content-Type', 'application/json');
+
+xhr.onload = () => {
+    if(xhr.status >= 400) {
+        reject(xhr.response);
+    } else  {
+        resolve(xhr.response);
     }
 }
 
+xhr.onerror = () => {
+    reject(xhr.response);
+}
+
+xhr.send(JSON.stringify(body))
+    })
+
+} */
+
+
+/* sendRequest('GET', url)
+.then(data => {console.log(data)})
+.catch(err => {console.log(err)}) */
+    
+let body = {
+    name: "asf",
+    age: 23,
+}
+
+let url = 'https://jsonplaceholder.typicode.com/users';
+
+
+    
+
+
+
+
+
+function sendRequest(method, url, body = null) {
+    const headers = {};
+    return fetch(url, {
+        method: method,
+        body: JSON.stringify(body),
+        headers: headers,
+    }).then(response => {
+        return response.json()
+    })
+
+  
+
+}
+
+sendRequest('POST', url, body)
+.then(data => {console.log(data)})
+.catch(err => {console.log(err)})
