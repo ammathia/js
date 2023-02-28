@@ -222,27 +222,33 @@ let body = {
 
 let url = 'https://jsonplaceholder.typicode.com/users';
 
-
-    
-
-
-
+let div = document.querySelector('.response');
 
 
 function sendRequest(method, url, body = null) {
-    const headers = {};
+    const headers = {
+        "Content-Type": 'application/json'
+    };
     return fetch(url, {
         method: method,
         body: JSON.stringify(body),
         headers: headers,
     }).then(response => {
+        if(response.ok) {
         return response.json()
-    })
+        }
 
-  
+        return response.json().then(error => {
+
+            const err = new Error('Something went wrong');
+            err.data = error;
+            throw err;
+        
+        })
+    });
 
 }
 
 sendRequest('POST', url, body)
-.then(data => {console.log(data)})
+.then(data => {div.innerHTML = JSON.stringify(data);})
 .catch(err => {console.log(err)})
