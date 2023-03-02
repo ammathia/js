@@ -215,7 +215,10 @@ xhr.send(JSON.stringify(body))
 .then(data => {console.log(data)})
 .catch(err => {console.log(err)}) */
     
-let body = {
+
+
+
+/* let body = {
     name: "asf",
     age: 23,
 }
@@ -251,4 +254,24 @@ function sendRequest(method, url, body = null) {
 
 sendRequest('POST', url, body)
 .then(data => {div.innerHTML = JSON.stringify(data);})
-.catch(err => {console.log(err)})
+.catch(err => {console.log(err)}); */
+
+
+
+
+
+function setCookie(name, value) {
+    document.cookie = name + '=' + encodeURIComponent(value);
+
+}
+
+
+function getcookie(name) {
+    const cookies = document.cookie.split('; ');
+    const result = cookies.find(el => el.startsWith(name + '='));
+    return result ? decodeURIComponent(result.slice(name.length + 1)) : null;
+}
+
+
+setCookie('username', 'Ivan');
+getcookie('username');
