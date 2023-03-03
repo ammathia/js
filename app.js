@@ -259,7 +259,7 @@ sendRequest('POST', url, body)
 
 
 
-
+/* 
 function setCookie(name, value) {
     document.cookie = name + '=' + encodeURIComponent(value);
 
@@ -274,4 +274,4 @@ function getcookie(name) {
 
 
 setCookie('username', 'Ivan');
-getcookie('username');
+getcookie('username'); */
