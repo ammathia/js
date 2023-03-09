@@ -275,3 +275,51 @@ function getcookie(name) {
 
 setCookie('username', 'Ivan');
 getcookie('username'); */
+
+
+
+
+/*
+let element = document.querySelector('.reveal');
+window.onscroll = () => {
+    let result  = element.getBoundingClientRect();
+    
+    if (result.bottom > 114 && result.bottom < 614) {
+        element.className = 'reveal-active'
+        console.log(result.bottom);
+    } else {
+        element.className = 'reveal'
+        
+    }
+
+}
+
+const options = {
+    threshold: 1, 
+    
+};
+
+
+
+const callback = function( entries, observer) {
+    
+    entries.forEach(element => {
+        
+        const {  target, isIntersecting, intersectingRatio } = element;
+        
+        if(isIntersecting) {
+            target.style.backgroundColor = 'red';
+        } else {
+            target.style.backgroundColor = 'black';
+            console.log(element);
+        }
+        
+    });
+}
+let target = document.querySelector('.reveal');
+
+
+const observer = new IntersectionObserver( callback, options);
+
+observer.observe(target);
+*/

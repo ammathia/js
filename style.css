@@ -61,6 +61,7 @@ textarea {
 
 .word-active {
     display: block;
+    display: none;
 }
 
 
@@ -69,6 +70,7 @@ textarea {
     position: absolute;
     top: 50%;
     left: 50%;
+    display: none;
 }
 
 .mb-3 {
@@ -76,12 +78,14 @@ textarea {
     top: 45%;
     left: 50%;
 
+    display: none;
 }
 
 .coloredText {
     position: absolute;
     top: 55%;
     left: 49%;
+    display: none;
 
 }
 
@@ -91,5 +95,18 @@ textarea {
 }
 
 .response {
+    display: none;
     transform: translate(15px, 5px);
+}
+
+
+
+.reveal {
+    background-color: black;
+    height: 100px;
+}
+
+.reveal-active {
+    background-color: red;
+    height: 100px;
 }
