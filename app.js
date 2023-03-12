@@ -335,8 +335,17 @@ const closeButton = document.querySelector('.close');
 
 button1.onclick = function showModule() {
     popup.className = "popup-active";
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${window.scrollY}px`;
+
 }
 
 closeButton.addEventListener('click', () => {
     popup.className = "popup";
+    document.body.style.position = '';
+    document.body.style.top = '';
 })
+
+
+
+
