@@ -160,16 +160,144 @@ ul li ul.dropdown {
     z-index: 999;
     padding: 0;
     display: none;
- }
+}
 
 
 
- ul li a:hover {
+ul li a:hover {
     background: red;
     
  }
 
- ul li:hover ul.dropdown {
+ul li:hover ul.dropdown {
     display: block;
     width: 100%;
  }
+
+main {
+    margin: 0;
+    padding: 0;
+    height: 80vh;
+    display: block;
+ }
+
+.space {
+    height: calc(70vh);
+    position: absolute;
+    width: 100%;
+    display: block;
+}
+.space-inner {
+    position: absolute;
+    width: 100%;
+    height: calc(70vh);
+}
+
+.popbtn {
+     font-size: 2rem;
+     background: #c071e1;
+     
+     padding: 10px;
+     position: relative;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     
+     border-radius: 0.7rem;
+     border: 2px solid black;
+     z-index: 1;
+
+     
+     
+}
+    
+.popbtn:hover {
+    background: #b247e0;
+
+}
+
+
+
+.popup {
+    background: white;
+    
+    
+    border: 2px solid black;
+    border-radius: 0.5rem;
+    
+    width: 400px;
+    height: 350px;
+    
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center; 
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+    
+    
+}
+
+.inptype {
+    border: 2px solid black ;
+    border-radius: 0.4rem;
+    padding: 5px;
+    font-size: 1rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.p1 {
+    font-size: 1rem;
+    margin: 10px 0 10px 0;
+}
+
+ .img1 {
+    width: 80px;
+    height: 80px;
+}
+
+
+.popup-active {
+    background: white;
+    
+    
+    border: 2px solid black;
+    border-radius: 0.5rem;
+    
+    width: 400px;
+    height: 350px;
+    
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    text-align: center; 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    visibility: visible;
+    z-index: 2;
+    transition: transform 0.4s, top 0.4s;
+}
+
+
+
+.close {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    right: -49%;
+    top: -17%;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+.x1 {
+    width: 100%;
+}

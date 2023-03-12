@@ -323,3 +323,20 @@ const observer = new IntersectionObserver( callback, options);
 
 observer.observe(target);
 */
+
+
+const button1 = document.getElementById('btnpopup');
+
+const popup = document.getElementById('window1');
+
+const closeButton = document.querySelector('.close');
+
+
+
+button1.onclick = function showModule() {
+    popup.className = "popup-active";
+}
+
+closeButton.addEventListener('click', () => {
+    popup.className = "popup";
+})
